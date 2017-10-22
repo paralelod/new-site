@@ -1,0 +1,79 @@
+{% if page.auto-scroll == true %}
+<div class="anim-menu undocked">
+{% else %}
+<div class="anim-menu">
+{% endif %}
+  <nav class="top-bar large" data-topbar role="navigation">
+    <ul class="title-area">
+      <li class="name">
+        <a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/{{ site.logo }}"></a>
+      </li>
+      <li class="toggle-topbar">
+        <a class="menu-button" id="menuButton">
+          {% if page.txt-color == "dark" %}
+          Menu <i class="fa fa-bars"></i>
+          {% endif %} 
+        </a>
+      </li>
+    </ul>
+    <section class="top-bar-section">
+      <ul class="right text-right links">
+        {% for link in site.links_home %}
+        <li>
+          {% if page.txt-color == "dark" %}
+            {% if link.external == true %}
+                  {% if link.icon %}
+                    <a class="top-bar-li-dark" href="{{ link.url }}" target="_blank">
+                      <i class="fa fa-{{ link.icon }}" style="color:#{{ link.icon-color }}"></i> 
+                      {{ link.title }}
+                    </a>
+                  {% else %}
+                    <a class="top-bar-li-dark page-scroll" href="{{ link.url }}" target="_blank">
+                      {{ link.title }}
+                    </a>
+                  {% endif %}
+            {% else %}
+                {% if link.icon %}
+                      <a class="top-bar-li-dark page-scroll" href="{{ link.url }}">
+                        <i class="fa fa-{{ link.icon }}" style="color:#{{ link.icon-color }}"></i> 
+                        {{ link.title }}
+                      </a>
+                {% else %}
+                      <a class="top-bar-li-dark page-scroll" href="{{ link.url }}">
+                        {{ link.title }}
+                      </a>
+                {% endif %}
+            {% endif %}
+          {% else %}
+              {% if link.external %}
+                    {% if link.icon %}
+                      <a href="{{ link.url }}" target="_blank">
+                        <i class="fa fa-{{ link.icon }}" style="color:#{{ link.icon-color }}"></i> 
+                        {{ link.title }}
+                      </a>
+                    {% else %}
+                      <a href="{{ link.url }}" target="_blank">
+                        {{ link.title }}
+                      </a>
+                    {% endif %}
+              {% else %}
+                  {% if link.icon %}
+                        <a href="{{ link.url }}" class="page-scroll">
+                          <i class="fa fa-{{ link.icon }}" style="color:#{{ link.icon-color }}"></i> 
+                          {{ link.title }}
+                        </a>
+                  {% else %}
+                        <a href="{{ link.url }}" class="page-scroll">
+                          {{ link.title }}
+                        </a>
+                  {% endif %}
+              {% endif %}
+          {% endif %} 
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+  </nav>
+</div>
+
+

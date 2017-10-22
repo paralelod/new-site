@@ -1,0 +1,14 @@
+<picture style="opacity:0.35" class="hide-for-small-only">
+	<img
+		sizes="(max-width: {{ img-bio-max-size }}px)100vw, {{ img-bio-max-size }}px"
+		
+		srcset=" 
+			{% for break in breakpoints %}
+			{{ img-bio-path }}/{{ break }}/{{ img-bio-bg }} {{ break }}w,
+			{% endfor %} 
+		"
+		
+		src="/lib/imgs/test/site.img-max-width/{{ img-bio-bg }}"
+		alt="diogo russo bio bg"
+	>
+</picture>

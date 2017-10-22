@@ -1,0 +1,152 @@
+
+# Site settings 
+
+#URL
+baseurl: "" # only for github, gulp baseurl set in config_dev.yml
+url: "http://hello.diogorusso.com" # the base hostname & protocol for your site
+fb-app-id: "915671155245552"
+
+
+# Build settings - PRODUCTION
+markdown: kramdown
+plugins: [jekyll-paginate,jekyll-sitemap]
+exclude: [/gulp, /node_modules,gulpfile.js,_assets,bower.json,Gemfile ,Gemfile.lock,package.json,PSD.js]
+permalink: /work/:title/
+
+
+# INDEX Pagination
+paginate:    12
+paginate_home: "/work"
+paginate_link: "/work/page"
+paginate_path: "/work/page:num"
+
+
+#analytics:
+
+
+#Menu Home
+links_home:
+  - title: Hello
+    url: "./"
+  # - title: Process
+  #   url: "#process-steps"
+  #- title: Portfolio
+    #url: "#work"
+    #external: true
+  # - title: Methods
+  #   url: "#process"
+  - title: Work
+    url: "http://work.diogorusso.com"
+    external: true
+  - title: Toolkit
+    url: "http://learn.diogorusso.com"
+    external: true
+  - title: Ideas
+    url: "http://https://medium.com/@diogorusso"
+    external: true
+  # - title: Newsletter
+  #   url: "http://work.diogorusso.com"
+  #   external: true
+  # - title: Courses
+  #   url: "http://diogorusso.teachable.com/"
+  #   external: true
+  - title: Connect
+    url: "#connect"
+    icon: heart
+    icon-color: "f14b4b"
+
+#Menu Pages  
+links_pages:
+  - title: About
+    url: "/"
+  - title: Work
+    url: "http://work.diogorusso.com"
+    external: true
+  - title: Contact
+    url: "#connect"
+    icon: heart
+    icon-color: "f14b4b "
+
+
+# Author
+author: "Diogo Russo"
+job: "experience designer"
+title: "Diogo Russo | Experience Design"
+description: "I'm a DESIGNER and STORYTELLER
+I help businesses, individuals and communities craft meaningful EXPERIENCES and PRODUCTS"
+logo: "lib/imgs/site/logo.png"
+favico: "/lib/imgs/site/favicon.ico"
+avatar: "/lib/imgs/site/site_card.jpg"
+email: hello_diogorusso@gmail.com
+country: "United States"
+region: "California"
+city: "Berkeley"
+
+see-also:
+    - "http://work.diogorusso.com"
+    - "http://www.lucaszappa.com.br"
+    - "http://www.estudioberinjela.com.br"
+
+
+
+#Social Media
+social:
+  - name: "behance"
+    url: "https://www.behance.net/diogorusso"
+  - name: "linkedin"
+    url: "https://www.linkedin.com/in/diogorusso/en"
+  - name: "medium"
+    url: "http://https://medium.com/@diogorusso"
+  # - name: "twitter"
+  #   url: "https://twitter.com/"
+  - name: "envelope-o"
+    url: "mailto:hello@diogorusso.com"
+
+
+
+# Home Hero Slides
+
+hero-01-main-path: "/lib/imgs/site/hero_01_fullpage/img_resp"
+
+heros-01-main:
+  - title: "Hello"
+    src: "slide_01.jpg"
+  # - title: "Blog"
+  #   src: "slide_01.jpg"  
+
+
+# Featured Grid - Stuff I've done
+featured-path: "/lib/imgs/site/grid_featured/img_resp"
+projects-featured:
+  - cover: "website.jpg"
+    title: "My Creative Journal"
+    fields: "Tutorials, Ideas and Freebies"
+    url: "http://work.diogorusso.com/webdesign-for-business"
+  - cover: "launchpad.jpg"
+    title: "LaunchPad UX"
+    fields: "UI/UX, Product Design"
+    url: "http://work.diogorusso.com/launchpad"
+  - cover: "Coca-Cola_FWC_14.jpg"
+    title: "World Cup Brazil"
+    fields: "Creative Direction, Film, Photography"
+    url: "http://work.diogorusso.com/fwc-2014-conteudo-multimidia-cobertura-coca-cola"
+  - cover: "Kenner_Music_case.jpg"
+    title: "Kenner IxD & Video"
+    fields: "Creative Direction, Interaction Design"
+    url: "http://work.diogorusso.com/kenner-ixd-motion"
+  - cover: "foodtopia.jpg"
+    title: "FOODTOPIA xD"
+    fields: "Entrepreneurship, Product Design"
+    url: "http://work.diogorusso.com/foodtopia"
+  - cover: "website.jpg"
+    title: "Wordpress for Startups"
+    fields: "UI/UX, Web Design"
+    url: "http://work.diogorusso.com/webdesign-for-business"
+  # - cover: "escola_Sesc.jpg"
+  #   title: "SESC School ID"
+  #   fields: "Branding, Graphic Design"
+  #   url: "http://work.diogorusso.com/escola-sesc-id"
+  # - cover: "escola_Sesc.jpg"
+  #   title: "Portfolio"
+  #   fields: "more work and side projects"
+  #   url: "http://work.diogorusso.com/escola-sesc-id"

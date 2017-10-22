@@ -1,0 +1,160 @@
+<div id="bio">
+	{% assign img-bio-path = '/lib/imgs/site/bio/img_resp' %}
+	{% assign img-bio-max-size =  791 %}
+	{% assign breakpoints = "791|480" | split: "|" %}<!-- responsive imgs -->
+
+
+	{% assign img-bio-bg = 'R_bio_bg.jpg' %}<!-- bio texture bg -->
+
+	{% assign img-profile = 'R_profile.jpg' %}<!--Profile IMG -->
+
+	{% assign img-card = 'R_card.jpg' %}<!--Card IMG -->
+
+	{% assign txt-bio = 'Im a DESIGNER AND STORYTELLER.<br> I love to create things, from business to graphics!! I want to help you to create more!!' %} <!--Bio Short TXT -->
+
+	{% assign action-1 = "Full Bio | https://www.linkedin.com/in/diogorusso/en" | split: "|" %}<!-- BTN action 1 -->
+
+
+
+	{% assign skill-1 = "Experience <br>& Product|/lib/imgs/site/bio/skill_01_experience.png" | split: "|" %}<!--skill 1 -->
+
+	{% assign skill-2 = "Creative <br> Direction|/lib/imgs/site/bio/skill_02_direction.png" | split: "|" %}<!--skill 2 -->
+
+	{% assign skill-3 = "Web &<br> Graphics|/lib/imgs/site/bio/skill_03_web.png" | split: "|" %}<!--skill 3 -->
+
+	{% assign skill-4 = "Illustration <br>& Art|/lib/imgs/site/bio/skill_04_graphics.png" | split: "|" %}<!--skill 4 -->
+
+
+
+	<div class="skill-row row fluid large-collapse medium-collapse small-collapse" data-equalizer>
+		<div class="small-12 medium-12 large-6 columns" data-equalizer-watch>
+			<div class="row large-collapse medium-collapse small-collapse">
+				<div class="small-12 medium-12 large-12 columns">
+					<picture>
+						<img
+							sizes="100vw, {{ img-bio-max-size }}px"
+							
+							srcset=" 
+								{% for break in breakpoints %}
+								{{ img-bio-path }}/{{ break }}/{{ img-profile }} {{ break }}w,
+								{% endfor %} 
+							"
+							
+							src="{{ img-bio-path }}/site.img-max-width/{{ img-profile }}"
+							alt="diogo russo profile"
+						>
+					</picture><!-- profile pic -->
+					<!--<picture class="hide-for-small">
+						<img
+							sizes="(max-width: {{ img-bio-max-size }}px)100vw, {{ img-bio-max-size }}px"
+							
+							srcset=" 
+								{% for break in breakpoints %}
+								{{ img-bio-path }}/{{ break }}/{{ img-card }} {{ break }}w,
+								{% endfor %} 
+							"
+							
+							src="{{ img-bio-path }}/site.img-max-width/{{ img-card }}"
+							alt="diogo russo card"
+						>
+					</picture> card pic -->
+				</div>	
+
+				<!--<div class="small-12 medium-6 large-6 columns txt-bio" data-equalizer-watch>
+					<div class="small-12 medium-12 large-12 columns v-center" itemscope itemtype="http://schema.org/Person">
+						<div class="hide">
+							<div itemscope itemtype="http://schema.org/Person">
+								<a itemprop="url" href="www.diogorusso.com">
+									<div itemprop="name"><strong>{{ site.author }}</strong></div>
+								</a>
+								<div itemscope itemtype="http://schema.org/Organization">
+									<span itemprop="name">{{ site.title }}</span>
+								</div>
+								<div itemprop="jobtitle">{{ site.job }}</div>
+								<div itemprop="description">{{ site.description }}</div>
+								<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+									<div>
+										<span itemprop="addressLocality">{{ site.city }}</span>, 
+										<span itemprop="addressRegion">{{ site.region }}</span>
+									</div>
+									<div itemprop="addressCountry">{{ site.country }}</div>
+								</div>
+								<div itemprop="email">{{ site.email }}</div>
+							</div>
+						</div>
+						<p>
+							{{ txt-bio }} 
+							<span class="hide-for-large-up">
+								<br>
+								My skills include human centered design methodologies, project management, business, experience and visual design tools. 
+							</span>
+							<br><br>
+							<a href="{{ action-1[1] }}" class="button large btn-outline-black" target="blank" >{{ action-1[0] }} | <i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+						</p>
+					</div> 
+				</div>-->
+			</div>
+			<div class="row hide-for-large-up">
+				<div class="small-8 medium-6 columns text-center small-centered medium-centered" style="padding: 3rem 0;">
+					<h2>I'm a designer, artist<br> and storyteller</h2>
+					<br>
+					<h3 style="max-width:960px;margin:auto;">
+						I'm an optimist dedicated to helping you explore and execute your ideas.
+					</h3>
+				</div>
+			</div>			 
+		</div><!--bio -->
+
+
+		<div class="small-12 medium-12 large-6 columns" style="background:#d8d8d8;">
+			<div class="row large-collapse medium-collapse small-collapse">
+				<div class="small-6 medium-6 large-6 columns skill">
+					{% include components/bio_img_bg.html %}
+					<div class="small-12 medium-12 large-12 columns v-center">
+						<p>
+							<img class="icon" src="{{ skill-1[1] }}"><br>{{ skill-1[0] }}
+						</p>
+					</div>
+				</div> <!--skill 1 -->
+				<div class="small-6 medium-6 large-6 columns skill">
+					{% include components/bio_img_bg.html %}
+					<div class="small-12 medium-12 large-12 columns v-center">
+						<p>
+							<img class="icon" src="{{ skill-2[1] }}"><br>{{ skill-2[0] }}
+						</p>
+					</div>
+				</div> <!--skill 2 -->
+			</div>
+			<div class="row large-collapse medium-collapse small-collapse">
+				<div class="small-6 medium-6 large-6 columns skill">
+					{% include components/bio_img_bg.html %}
+					<div class="small-12 medium-12 large-12 columns v-center">
+						<p>
+							<img class="icon" src="{{ skill-3[1] }}"><br>{{ skill-3[0] }}
+						</p>
+					</div>
+				</div> <!--skill 3 -->
+				<div class="small-6 medium-6 large-6 columns skill">
+					{% include components/bio_img_bg.html %}
+					<div class="small-12 medium-12 large-12 columns v-center">
+						<p>
+							<img class="icon" src="{{ skill-4[1] }}"><br>{{ skill-4[0] }}
+						</p>
+					</div>
+				</div> <!--skill 4 -->
+			</div>
+		</div><!--skills -->
+	</div>
+
+	<div class="row">
+		<div class="large-10 medium-6 columns large-centered medium-centered show-for-large-up" style="padding:5rem 0;">
+			<h2>I'm a designer, artist and storyteller</h2>
+			<h3>
+				an optimist dedicated to helping you explore and execute your ideas.
+			</h3>
+			 <br><br>
+			<a href="#bio" class="button round large btn-outline-black page-scroll">full profile <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+		</div>
+	</div>
+
+</div>

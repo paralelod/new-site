@@ -1,0 +1,97 @@
+---
+layout: page
+auto-scroll: false
+txt-color: dark
+page-id: home
+
+---
+
+<div class="section" data-anchor="hello">
+	{% include sliders/hero_fullpage.html %}
+</div> <!--cover-->
+
+
+<div class="section fp-auto-height" data-anchor="bio">
+
+	{% include components/bio_content.html %}
+
+</div><!--bio-->
+
+{% include components/process_steps_bar_slide.html %}
+
+<div class="section fp-auto-height" id="work" data-anchor="projects">
+	{% include grids/grid_card_cover_posts_2.html %}
+</div><!-- post cards -->
+
+<!--process steps-->
+<!-- <div class="row">
+	<h1 class="text-center">Clients</h1>
+	<h3>SINCE 1998, we’ve designed over 5,000 award-winning web design and website development projects on budget and on-time for over 1,000 start-ups to fortune 100 companies.</h3>
+</div>
+<div class="row large-collapse medium-collapse small-collapse fluid">
+	
+	<div class="small-12 medium-6 large-3 columns">
+		<picture>
+			<img
+				sizes="(max-width: {{ img-bio-max-size }}px)100vw, {{ img-bio-max-size }}px"
+				
+				srcset=" 
+					{% for break in breakpoints %}
+					{{ img-bio-path }}/{{ break }}/{{ img-profile }} {{ break }}w,
+					{% endfor %} 
+				"
+				
+				src="{{ img-bio-path }}/site.img-max-width/{{ img-profile }}"
+				alt="diogo russo profile"
+			>
+		</picture>
+	</div>	
+	<div class="small-12 medium-6 large-3 columns txt-bio" data-equalizer-watch>
+		<picture>
+			<img
+				sizes="(max-width: {{ img-bio-max-size }}px)100vw, {{ img-bio-max-size }}px"
+				
+				srcset=" 
+					{% for break in breakpoints %}
+					{{ img-bio-path }}/{{ break }}/{{ img-card }} {{ break }}w,
+					{% endfor %} 
+				"
+				
+				src="{{ img-bio-path }}/site.img-max-width/{{ img-card }}"
+				alt="diogo russo card"
+			>
+		</picture>
+	</div>
+	<div class="small-12 medium-6 large-3 columns">
+		<picture>
+			<img
+				sizes="(max-width: {{ img-bio-max-size }}px)100vw, {{ img-bio-max-size }}px"
+				
+				srcset=" 
+					{% for break in breakpoints %}
+					{{ img-bio-path }}/{{ break }}/{{ img-profile }} {{ break }}w,
+					{% endfor %} 
+				"
+				
+				src="{{ img-bio-path }}/site.img-max-width/{{ img-profile }}"
+				alt="diogo russo profile"
+			>
+		</picture>
+	</div>	
+	<div class="small-12 medium-6 large-3 columns txt-bio" data-equalizer-watch>
+		<picture>
+			<img
+				sizes="(max-width: {{ img-bio-max-size }}px)100vw, {{ img-bio-max-size }}px"
+				
+				srcset=" 
+					{% for break in breakpoints %}
+					{{ img-bio-path }}/{{ break }}/{{ img-card }} {{ break }}w,
+					{% endfor %} 
+				"
+				
+				src="{{ img-bio-path }}/site.img-max-width/{{ img-card }}"
+				alt="diogo russo card"
+			>
+		</picture>
+	</div>
+</div> -->

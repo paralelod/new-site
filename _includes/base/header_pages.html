@@ -1,0 +1,128 @@
+{% if page.auto-scroll == true %}
+<div class="anim-menu undocked">
+{% else %}
+<div class="anim-menu">
+{% endif %}
+  <nav class="top-bar large" data-topbar role="navigation">
+    <ul class="title-area">
+      <li class="name">
+        <a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/{{ site.logo }}"></a>
+      </li>
+      <li class="toggle-topbar"> 
+        <a class="menu-button" id="menuButton">
+          {% if page.txt-color == "dark" %}
+           <span class="burger-icon-dark"></span>
+          {% else %}
+           <span class="burger-icon"></span>
+          {% endif %}
+        </a>
+      </li>
+    </ul>
+    <section class="top-bar-section">
+      <ul class="right text-right links">
+        {% for link in site.links_pages %}
+        <li>
+          {% if page.txt-color == "dark" %}
+            {% if link.external == true %}
+                  {% if link.icon %}
+                    <a class="top-bar-li-dark" href="{{ link.url }}" target="blank">
+                      <i class="fa fa-{{ link.icon }}" style="color:#{{ link.icon-color }}"></i> 
+                      {{ link.title }}
+                    </a>
+                  {% else %}
+                    <a class="top-bar-li-dark page-scroll" href="{{ link.url }}">
+                      {{ link.title }}
+                    </a>
+                  {% endif %}
+            {% else %}
+                {% if link.icon %}
+                      <a class="top-bar-li-dark page-scroll" href="{{ link.url }}">
+                        <i class="fa fa-{{ link.icon }}" style="color:#{{ link.icon-color }}"></i> 
+                        {{ link.title }}
+                      </a>
+                {% else %}
+                      <a class="top-bar-li-dark page-scroll" href="{{ link.url }}">
+                        {{ link.title }}
+                      </a>
+                {% endif %}
+            {% endif %}
+          {% else %}
+              {% if link.external %}
+                    {% if link.icon %}
+                      <a href="{{ link.url }}" target="blank">
+                        <i class="fa fa-{{ link.icon }}" style="color:#{{ link.icon-color }}"></i> 
+                        {{ link.title }}
+                      </a>
+                    {% else %}
+                      <a href="{{ link.url }}">
+                        {{ link.title }}
+                      </a>
+                    {% endif %}
+              {% else %}
+                  {% if link.icon %}
+                        <a href="{{ link.url }}" class="page-scroll">
+                          <i class="fa fa-{{ link.icon }}" style="color:#{{ link.icon-color }}"></i> 
+                          {{ link.title }}
+                        </a>
+                  {% else %}
+                        <a href="{{ link.url }}" class="page-scroll">
+                          {{ link.title }}
+                        </a>
+                  {% endif %}
+              {% endif %}
+          {% endif %} 
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+  </nav>
+</div>
+
+
+
+{% if page.page-id == "novo" %}
+<div class="row hidden fluid" id="process-bar-top" href="#experience">
+  <a  class="page-scroll" href="#creativity-design">
+    <div class="small-4 medium-2 large-2 columns text-center creativity">
+      <div class="step text-center fluid">
+        Process <br> & Methods
+      </div> 
+    </div>
+  </a>
+  <a  class="page-scroll" href="#experience">  
+  <div class="small-4 medium-2 large-2 columns experience">
+      <div class="step text-center fluid">
+        Experience <br>& Learn 
+      </div>  
+  </div>
+  </a>
+  <a  class="page-scroll" href="#document"> 
+  <div class="small-4 medium-2 large-2 columns document">
+      <div class="step text-center fluid">
+        Document<br>& Share
+      </div>  
+  </div>
+  </a>
+  <a  class="page-scroll" href="#prototype"> 
+  <div class="small-4 medium-2 large-2 columns prototype">
+      <div class="step text-center fluid">
+        Prototype <br> & Validate
+      </div>  
+  </div>
+  </a>
+  <a  class="page-scroll" href="#design"> 
+  <div class="small-4 medium-2 large-2 columns design">
+      <div class="step text-center fluid">
+        Design<br> & Launch
+      </div>  
+  </div>
+  </a>
+  <a  class="page-scroll" href="#connect"> 
+  <div class="small-4 medium-2 large-2 columns connect">
+      <div class="step text-center fluid">
+        Conennect <br>& Grow
+      </div>  
+  </div>
+  </a>  
+</div>
+{% endif %}

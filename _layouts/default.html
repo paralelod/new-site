@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  {% include base/head.html %} 
+  <body>
+    {% include js/fb-app.html %}
+    {% include base/preloader.html %}
+    <a id="top"></a>
+    {% if page.page-id == "home"  %}
+      {% include base/header_home.html %}
+    {% else %}
+      {% include base/header_pages.html %}
+    {% endif %}
+
+    {% if page.auto-scroll == true %}
+    <div id="fullpage-scroll">
+    {% else %}
+    <div id="fullpage-noscroll">
+    {% endif %}
+      {{ content }}
+      {% include base/footer.html %}
+    </div>
+    {% include base/back_top_nav_btn.html %}
+    <script type="text/javascript" src="{{ site.baseurl }}/lib/js/script.js"></script>
+
+    {% include js/init_fullpage.html %}
+    {% if page.page-id == "novo" %} 
+      {% include js/aboutJS.html %}
+    {% endif %} 
+    {% include js/g_analytics.html %}
+  </body>
+</html>
+
