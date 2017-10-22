@@ -19,18 +19,18 @@
 			<li itemscope itemtype="http://schema.org/CreativeWork" typeof="doap:Project">
 				<div class="card-cover">
 						<div class="grid-media media">
-							<a href="{{ project.url }}" target="blank" itemprop="url" property="doap:homepage">
+							<a href="{{ site.baseurl }}/{{ project.url }}" target="blank" itemprop="url" property="doap:homepage">
 				        	<picture>
 								<img
 									sizes="(max-width: {{ featured-cover-max-size }}px)100vw, {{ featured-cover-max-size }}px"
 									
 									srcset=" 
 										{% for break in breakpoints %}
-										{{ featured-cover-path }}/{{ break }}/{{ project.cover }} {{ break }}w,
+										{{ site.baseurl }}/{{ featured-cover-path }}/{{ break }}/{{ project.cover }} {{ break }}w,
 										{% endfor %} 
 									"
 									
-									src="{{ featured-cover-path }}/{{ featured-cover-max-size }}/{{ project.cover }}"
+									src="{{ site.baseurl }}/{{ featured-cover-path }}/{{ featured-cover-max-size }}/{{ project.cover }}"
 									alt="{{ project.title }}"
 								>
 							</picture>

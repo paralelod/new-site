@@ -9,7 +9,7 @@
 {% for hero in site.heros-01-main %}
 
 .{{ hero.title }}{
-		background:url('{{ site.hero-01-main-path }}/{{ break[3] }}/{{ hero.src  }}');
+		background:url('{{ site.baseurl }}/{{ site.hero-01-main-path }}/{{ break[3] }}/{{ hero.src  }}');
 		background-size: cover;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
@@ -19,7 +19,7 @@
 
 @media only screen and (max-width: {{ break[0] }}px) {
 	.{{ hero.title }}{
-		background:url('{{ site.hero-01-main-path }}/{{ break[2] }}/{{ hero.src  }}');
+		background:url('{{ site.baseurl }}/{{ site.hero-01-main-path }}/{{ break[2] }}/{{ hero.src  }}');
 		background-size: cover;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
@@ -29,7 +29,7 @@
 }
 @media only screen and (min-width: {{ break[0] }}px) and (max-width: {{ break[1] }}px) {
 	.{{ hero.title }}{
-		background:url('{{ site.hero-01-main-path }}/{{ break[2] }}/{{ hero.src  }}');
+		background:url('{{ site.baseurl }}/{{ site.hero-01-main-path }}/{{ break[2] }}/{{ hero.src  }}');
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
@@ -38,7 +38,7 @@
 }
 @media only screen and (min-width: {{ break[1] }}px) and (max-width: {{ break[2] }}px) {
 	.{{ hero.title }}{
-		background:url('{{ site.hero-01-main-path }}/{{ break[3] }}/{{ hero.src  }}');
+		background:url('{{ site.baseurl }}/{{ site.hero-01-main-path }}/{{ break[3] }}/{{ hero.src  }}');
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
@@ -47,7 +47,7 @@
 }
 @media only screen and (min-width: {{ break[2] }}px) and (max-width: {{ break[3] }}px) {
 	.{{ hero.title }}{
-		background:url('{{ site.hero-01-main-path }}/{{ break[3] }}/{{ hero.src  }}');
+		background:url('{{ site.baseurl }}/{{ site.hero-01-main-path }}/{{ break[3] }}/{{ hero.src  }}');
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
@@ -56,7 +56,7 @@
 }
 @media only screen and (min-width: {{ break[3] }}px) and (max-width: {{ break[4] }}px) {
 	.{{ hero.title }}{
-		background:url('{{ site.hero-01-main-path }}/{{ break[4] }}/{{ hero.src  }}');
+		background:url('{{ site.baseurl }}/{{ site.hero-01-main-path }}/{{ break[4] }}/{{ hero.src  }}');
 		 -webkit-background-size: cover;
 		 -moz-background-size: cover;
 		 -o-background-size: cover;
@@ -65,7 +65,7 @@
 }
 @media only screen and (min-width: {{ break[4] }}px) {
 	.{{ hero.title }}{
-		background:url('{{ site.hero-01-main-path }}/{{ break[4] }}/{{ hero.src  }}');
+		background:url('{{ site.baseurl }}/{{ site.hero-01-main-path }}/{{ break[4] }}/{{ hero.src  }}');
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
