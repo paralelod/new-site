@@ -3,7 +3,7 @@
 
 #URL
 baseurl: "" # only for github, gulp baseurl set in config_dev.yml
-url: "http://hello.diogorusso.com" # the base hostname & protocol for your site
+url: "http://lab.diogorusso.com/new-site" # the base hostname & protocol for your site
 fb-app-id: "915671155245552"
 
 
