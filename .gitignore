@@ -12,3 +12,4 @@ Gemfile.lock
 _config_dev.yml
 package.json
 PSD.js
+.DS_Store

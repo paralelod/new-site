@@ -38,12 +38,12 @@ links_home:
   - title: Work
     url: "http://work.diogorusso.com"
     external: true
-  - title: Toolkit
-    url: "http://learn.diogorusso.com"
+  - title: journal
+    url: "http://lab.diogorusso.com/guides"
     external: true
-  - title: Ideas
-    url: "http://https://medium.com/@diogorusso"
-    external: true
+  # - title: Ideas
+  #   url: "http://https://medium.com/@diogorusso"
+  #   external: true
   # - title: Newsletter
   #   url: "http://work.diogorusso.com"
   #   external: true
